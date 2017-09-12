@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Urls</h2>
+@foreach (var item in ViewBag.urlList)
+{
+    <ul>
+        @Html.ActionLink((string)item, "RedirectUrl", "UrlList", new { urlShort = item }, null)
+    </ul>
+}
+

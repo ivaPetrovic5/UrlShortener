@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "ShowStatistics";
+}
+
+<h2>Show Statistics</h2>
+<table border="1" width="1000px">
+    <tr>
+        <th>Url</th>
+        <th>Number of visits</th>
+    </tr>
+    @foreach (KeyValuePair<string, int> item in ViewBag.urlDict)
+    {
+        <tr>
+            <td>
+                @item.Key
+            </td>
+            <td>
+                @item.Value
+            </td>
+        </tr>
+    }
+</table>
