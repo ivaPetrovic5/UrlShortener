@@ -23,7 +23,7 @@ namespace UrlShortener.Models
         public int UrlId { get; set; }
         public string UrlLong { get; set; }
         public string UrlShort { get; set; }
-        public int RedirectType { get; set; }
+        public Nullable<int> RedirectType { get; set; }
         public string UserId { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }

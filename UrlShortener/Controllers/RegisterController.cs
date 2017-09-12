@@ -18,7 +18,16 @@ namespace UrlShortener.Controllers
             UrlShortenerModelContainer db_context = new UrlShortenerModelContainer();
             dynamic json = jsonData;
             string urlLong = json.url;
-            int redirectType = json.redirectType;
+            int redirectType;
+            try
+            {
+                redirectType = json.redirectType;
+            }
+            catch (Exception)
+            {
+                redirectType = 302;
+            }
+            
             var header = Request.Headers.Authorization;
 
             if (urlLong == null)

@@ -1,0 +1,3 @@
+Prilikom pokretanja aplikacije potrebno se registrirati nakon cega se dobije lozinka te se pomocu odabranog korisnickog imena i lozinke moze ulogirati u aplikaciju. 
+Nakon uspjesne prijave korisnik moze pregledati listu urlova koje je registrirao (short) te kliknuti na njih nakon cega ga se preusmjerava na odgovarajucu lokaciju.
+Korisnik takoder ima opciju registracije url-a te pregleda statistike posjeta stranice. Detaljnije o svim akcijama moze se procitati klikom na Help. 

@@ -101,7 +101,7 @@
     <Property Name="UrlId" Type="Int32" Nullable="false" />
     <Property Name="UrlLong" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="UrlShort" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="RedirectType" Type="Int32" Nullable="false" />
+    <Property Name="RedirectType" Type="Int32" />
     <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="AspNetUser" Relationship="UrlShortenerModel.Fk_Url_User" FromRole="Url" ToRole="AspNetUser" />
     <NavigationProperty Name="Visits" Relationship="UrlShortenerModel.Fk_Visit_Url" FromRole="Url" ToRole="Visit" />

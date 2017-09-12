@@ -30,7 +30,16 @@ namespace UrlShortener.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 string token = (string)Session["user"];
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
-                var content = new { url = url.UrlLong, redirectType = url.RedirectType };
+
+                object content;
+                if (url.RedirectType == null)
+                {
+                    content = new { url = url.UrlLong };
+                } else
+                {
+                    content = new { url = url.UrlLong, redirectType = url.RedirectType };
+                }
+                
                 HttpResponseMessage response = await client.PostAsJsonAsync("api/register", content);
                 if (!response.IsSuccessStatusCode)
                 {
